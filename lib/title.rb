@@ -53,7 +53,8 @@ class Selector < GameObject
 		@choice = choice
 		@x = @x2 = 0
 		@y = @texts[choice].y+3
-		@speed = 10
+		# @speed = 10
+		@speed = 100
 		@left = Rubygame::Surface.new [5, 40]
 		@right = Rubygame::Surface.new [5,40]
 		@left.fill [255, 255, 255]

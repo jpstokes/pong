@@ -50,7 +50,7 @@ class InGame
 			case ev
 			when Rubygame::QuitEvent
 				Rubygame.quit
-				exit	
+				exit
 			when Rubygame::KeyDownEvent
 				if ev.key == Rubygame::K_Y and @won
 					# Reset the game
@@ -101,7 +101,7 @@ class InGame
 	end
 end
 
-class Paddle < GameObject  
+class Paddle < GameObject
 	def initialize x, y, score_x, score_y, up_key, down_key, top_limit, bottom_limit
 		surface = Rubygame::Surface.new [20, 100]
 		surface.fill [255, 255, 255]
@@ -183,7 +183,7 @@ class Background < GameObject
 			[surface.width/2+5, surface.height], white
 
 		super 0, 0, surface
-	end 
+	end
 end
 
 class Ball < GameObject

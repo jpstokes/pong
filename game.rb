@@ -8,12 +8,14 @@ require './lib/ingame.rb'
 Rubygame::TTF.setup
 
 class Game
+
 	attr_accessor :screen, :queue, :clcok, :state
+
 	def initialize
 		@screen = Rubygame::Screen.new [640, 480], 0, [Rubygame::HWSURFACE, Rubygame::DOUBLEBUF]
 		@screen.title = "Pong"
 		@queue = Rubygame::EventQueue.new
-		@clock = Rubygame::Clock.new 
+		@clock = Rubygame::Clock.new
 		@clock.target_framerate = 60
 
 		# The state has to be changed by the developer
@@ -36,7 +38,7 @@ class Game
 			case ev
 			when Rubygame::QuitEvent
 				Rubygame.quit
-				exit	
+				exit
 			when Rubygame::KeyDownEvent
 				# This is somewhat of a hack since EventQueue#push seems to
 				# add on events while your still looping over the queu, meaning
